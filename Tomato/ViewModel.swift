@@ -35,4 +35,6 @@ class ViewModel: ObservableObject {
     static func getformatedTime(timeInSec value: Int) -> String {
         String(format: "%02d", value / 60) + ":" + String(format: "%02d", value % 60)
     }
+    
+    // MARK: move logic from view to viewModel
 }
