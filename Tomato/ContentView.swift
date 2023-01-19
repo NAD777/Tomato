@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel: ViewModel
-    @State private var circlePostion: CGPoint = CGPoint(x: 100.0, y: 100.0)
     var body: some View {
         ZStack {
             let backGroundColor = Color(hex: 0x355070)
@@ -73,12 +72,8 @@ struct TimerControlView: View {
                 return
             }
             withAnimation(.easeIn(duration: 0.1)) {
-                if viewModel.sliderValue > 0 {
-                    viewModel.sliderValue -= 1
-                    angle = TimerControlView.calculateAngle(value: viewModel.sliderValue)
-                } else {
-                    viewModel.timerState = .OFF
-                }
+                viewModel.updateCountDown()
+                angle = TimerControlView.calculateAngle(value: viewModel.sliderValue)
             }
         }
         //
@@ -88,24 +83,18 @@ struct TimerControlView: View {
     }
     
     private func change(location: CGPoint) {
-//        print("Prev:", angle, terminator: " ")
         let ang = atan2(location.y, location.x) + .pi / 2
         let convertedAngle = radianToDegree(radian: ang)
         let newAngle = (convertedAngle > 0.0 ? convertedAngle : 360 + convertedAngle)
-//        angle = newAngle
 
         if 330 <= angle, angle <= 360, 0 <= newAngle, newAngle <= 180 {
             angle = 360
-//            print(1)
         } else if 0 <= angle, angle <= 30, 180 <= newAngle, newAngle <= 360 {
             angle = 0
-//            print(1)
         } else {
             angle = newAngle
         }
         viewModel.sliderValue = Int(floor((CONSTS.maxValue - CONSTS.minValue) / 360 * angle / (5 * 60)) * (5 * 60))
-//        print(sliderValue)
-//        print("Cur:", angle)
     }
     
     static private func calculateAngle(value: Int) -> Double {
