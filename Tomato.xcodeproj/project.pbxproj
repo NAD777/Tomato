@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		016DEDB22979F5A000E5CA79 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016DEDB12979F5A000E5CA79 /* TimerView.swift */; };
 		0184D131296C8E51003C908A /* TomatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0184D130296C8E51003C908A /* TomatoApp.swift */; };
 		0184D133296C8E51003C908A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0184D132296C8E51003C908A /* ContentView.swift */; };
 		0184D135296C8E52003C908A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0184D134296C8E52003C908A /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		016DEDB12979F5A000E5CA79 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		0184D12D296C8E51003C908A /* Tomato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0184D130296C8E51003C908A /* TomatoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoApp.swift; sourceTree = "<group>"; };
 		0184D132296C8E51003C908A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				0184D13F296C9A6E003C908A /* Pie.swift */,
 				0184D130296C8E51003C908A /* TomatoApp.swift */,
 				0184D132296C8E51003C908A /* ContentView.swift */,
+				016DEDB12979F5A000E5CA79 /* TimerView.swift */,
 				0184D141296DA7F0003C908A /* ViewModel.swift */,
 				0184D143296DA886003C908A /* Model.swift */,
 				0184D134296C8E52003C908A /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				016DEDB22979F5A000E5CA79 /* TimerView.swift in Sources */,
 				0184D144296DA886003C908A /* Model.swift in Sources */,
 				0184D140296C9A6E003C908A /* Pie.swift in Sources */,
 				0184D133296C8E51003C908A /* ContentView.swift in Sources */,
